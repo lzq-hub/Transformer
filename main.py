@@ -77,9 +77,6 @@ def get_data():
     amplitude = scaler.fit_transform(series.to_numpy().reshape(-1, 1)).reshape(-1)
     amplitude = scaler.fit_transform(amplitude.reshape(-1, 1)).reshape(-1)
 
-    train_data = amplitude[:-288*2]
-    val_data = amplitude[-288*2:-288]
-    test_data = amplitude[-288:]
 
     # convert our train data into a pytorch train tensor
     #train_tensor = torch.FloatTensor(train_data).view(-1)
